@@ -16,9 +16,9 @@ author: Ondrej Winter
 runs:
   using: 'composite'
   steps:
-  - run: sudo sh -c "wget -O - https://dl.openfoam.org/gpg.key | apt-key add -"
+  - run: sudo sh -c "wget -O - https://dl.openfoam.org/gpg.key | apt-key add -" \
+      && sudo add-apt-repository http://dl.openfoam.org/ubuntu
     shell: bash
-  #- run: sudo add-apt-repository http://dl.openfoam.org/ubuntu
   #- run: sudo apt-get update
   #- run: sudo apt-get -y install openfoam8
   #- run: . /opt/openfoam8/etc/bashrc
