@@ -17,9 +17,10 @@ runs:
   using: 'composite'
   steps:
   - run: sudo sh -c "wget -O - https://dl.openfoam.org/gpg.key | apt-key add -"
-  - run: sudo add-apt-repository http://dl.openfoam.org/ubuntu
-  - run: sudo apt-get update
-  - run: sudo apt-get -y install openfoam8
-  - run: . /opt/openfoam8/etc/bashrc
-  - run: mkdir -p $FOAM_RUN
-  - run: cp -r $FOAM_TUTORIALS $FOAM_RUN
+  shell: bash
+  #- run: sudo add-apt-repository http://dl.openfoam.org/ubuntu
+  #- run: sudo apt-get update
+  #- run: sudo apt-get -y install openfoam8
+  #- run: . /opt/openfoam8/etc/bashrc
+  #- run: mkdir -p $FOAM_RUN
+  #- run: cp -r $FOAM_TUTORIALS $FOAM_RUN
