@@ -2,13 +2,24 @@ name: Install OpenFOAM-8 on ubuntu
 description: Install OpenFOAM-8 on ubuntu for github actions.
 author: Ondrej Winter
 
+#runs:
+#  steps:
+#  - run: |
+#    sudo sh -c "wget -O - https://dl.openfoam.org/gpg.key | apt-key add -" &&
+#    sudo add-apt-repository http://dl.openfoam.org/ubuntu &&
+#    sudo apt-get update &&
+#    sudo apt-get -y install openfoam8 &&
+#    . /opt/openfoam8/etc/bashrc &&
+#    mkdir -p $FOAM_RUN &&
+#    cp -r $FOAM_TUTORIALS $FOAM_RUN
+
 runs:
+  using: 'composite'
   steps:
-  - run: |
-    sudo sh -c "wget -O - https://dl.openfoam.org/gpg.key | apt-key add -" &&
-    sudo add-apt-repository http://dl.openfoam.org/ubuntu &&
-    sudo apt-get update &&
-    sudo apt-get -y install openfoam8 &&
-    . /opt/openfoam8/etc/bashrc &&
-    mkdir -p $FOAM_RUN &&
-    cp -r $FOAM_TUTORIALS $FOAM_RUN
+  - run: sudo sh -c "wget -O - https://dl.openfoam.org/gpg.key | apt-key add -"
+  - run: sudo add-apt-repository http://dl.openfoam.org/ubuntu
+  - run: sudo apt-get update
+  - run: sudo apt-get -y install openfoam8
+  - run: . /opt/openfoam8/etc/bashrc
+  - run: mkdir -p $FOAM_RUN
+  - run: cp -r $FOAM_TUTORIALS $FOAM_RUN
