@@ -23,4 +23,5 @@ runs:
       && . /opt/openfoam8/etc/bashrc
       && mkdir -p $FOAM_RUN
       && cp -r $FOAM_TUTORIALS $FOAM_RUN
+      && echo ". /opt/openfoam8/etc/bashrc" >> ~/.bashrc
     shell: bash
