@@ -6,25 +6,7 @@ runs:
   using: 'composite'
   steps:
     - name: Installation
-      run: |
-        sudo sh -c "wget --no-check-certificate -O - https://dl.openfoam.org/gpg.key | apt-key add -"
-        sudo add-apt-repository http://dl.openfoam.org/ubuntu
-        sudo apt-get update
-        sudo apt-get -y install openfoam8
-        echo "AAA4"
-        echo $FOAM8_BASHRC
-        echo "AAA5"
-        cat $FOAM8_BASHRC
-        echo "AAA6"
-        ls /opt/openfoam8/etc/
-        ls $FOAM8_BASHRC
-        . /opt/openfoam8/etc/bashrc
-        echo "AAA7"
-        echo $WM_ARCH
-        #echo "AAA5"
-        #mkdir -p $FOAM_RUN
-        #echo "AAA6"
-        #cp -r $FOAM_TUTORIALS $FOAM_RUN
+      run: ./install
       env:
         FOAM8_BASHRC: /opt/openfoam8/etc/bashrc
       shell: bash
