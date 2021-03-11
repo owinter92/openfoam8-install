@@ -6,7 +6,7 @@ runs:
   using: 'composite'
   steps:
     - name: Installation
-      run: ./install
+      main: install
       env:
         FOAM8_BASHRC: /opt/openfoam8/etc/bashrc
       shell: bash
