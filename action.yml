@@ -14,10 +14,11 @@ runs:
       echo $FOAM8_BASHRC
       cat $FOAM8_BASHRC
       source $FOAM8_BASHRC
-      echo "AAA5"
-      mkdir -p $FOAM_RUN
-      echo "AAA6"
-      cp -r $FOAM_TUTORIALS $FOAM_RUN
+      echo $WM_ARCH
+      #echo "AAA5"
+      #mkdir -p $FOAM_RUN
+      #echo "AAA6"
+      #cp -r $FOAM_TUTORIALS $FOAM_RUN
     shell: bash
     env:
       FOAM8_BASHRC: "/opt/openfoam8/etc/bashrc"
