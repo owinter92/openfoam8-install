@@ -16,7 +16,7 @@ runs:
         echo "AAA5"
         cat $FOAM8_BASHRC
         echo "AAA6"
-        . $FOAM8_BASHRC
+        . /opt/openfoam8/etc/bashrc
         echo "AAA7"
         echo $WM_ARCH
         #echo "AAA5"
@@ -24,5 +24,5 @@ runs:
         #echo "AAA6"
         #cp -r $FOAM_TUTORIALS $FOAM_RUN
       env:
-        FOAM8_BASHRC: "/opt/openfoam8/etc/bashrc"
+        FOAM8_BASHRC: /opt/openfoam8/etc/bashrc
       shell: bash
