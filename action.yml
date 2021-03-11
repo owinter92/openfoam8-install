@@ -2,9 +2,10 @@ name: Install OpenFOAM-8 on ubuntu
 description: Install OpenFOAM-8 on ubuntu for github actions.
 author: Ondrej Winter
 
+env:
+  FOAM8_BASHRC: /opt/openfoam8/etc/bashrc
+
 runs:
-  env:
-    FOAM8_BASHRC: /opt/openfoam8/etc/bashrc
   using: 'composite'
   steps:
     - name: Installation
