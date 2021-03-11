@@ -18,12 +18,17 @@ runs:
   steps:
   - run: |
       sudo sh -c "wget --no-check-certificate -O - https://dl.openfoam.org/gpg.key | apt-key add -"
+      echo "1"
       sudo add-apt-repository http://dl.openfoam.org/ubuntu
-      sudo add-apt-repository http://dl.openfoam.org/ubuntu
+      echo "2"
       sudo apt-get update
+      echo "3"
       sudo apt-get -y install openfoam8
+      echo "4"
       source $FOAM8_BASHRC
+      echo "5"
       mkdir -p $FOAM_RUN
+      echo "6"
       cp -r $FOAM_TUTORIALS $FOAM_RUN
     shell: bash
     env:
