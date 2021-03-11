@@ -6,7 +6,7 @@ runs:
   using: 'composite'
   steps:
     - name: Installation
-      run: ${{ github.action_path }}/install_foam.sh
+      run: exec ${{ github.action_path }}/install_foam.sh
       env:
         FOAM8_BASHRC: /opt/openfoam8/etc/bashrc
       shell: bash
