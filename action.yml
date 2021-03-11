@@ -6,13 +6,14 @@ runs:
   using: 'composite'
   steps:
   - run: |
-      sudo sh -c "wget --no-check-certificate -O - https://dl.openfoam.org/gpg.key | apt-key add -"
+      echo "AAA0"
+      sudo sh -c "wget --no-check-certificate -O - https://dl.openfoam.org/gpg.key | apt-key add -" > /dev/null
       echo "AAA1"
-      sudo add-apt-repository http://dl.openfoam.org/ubuntu
+      sudo add-apt-repository http://dl.openfoam.org/ubuntu > /dev/null
       echo "AAA2"
-      sudo apt-get update
+      sudo apt-get update > /dev/null
       echo "AAA3"
-      sudo apt-get -y install openfoam8
+      sudo apt-get -y install openfoam8 > /dev/null
       echo "AAA4"
       source $FOAM8_BASHRC
       echo "AAA5"
