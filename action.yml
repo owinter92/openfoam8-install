@@ -3,6 +3,7 @@ description: Install OpenFOAM-8 on ubuntu for github actions.
 author: Ondrej Winter
 
 runs:
+  using: 'composite'
   steps:
     - name: Installation
       run: |
