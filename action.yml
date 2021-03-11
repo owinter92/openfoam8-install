@@ -16,6 +16,8 @@ runs:
         echo "AAA5"
         cat $FOAM8_BASHRC
         echo "AAA6"
+        ls /opt/openfoam8/etc/
+        ls $FOAM8_BASHRC
         . /opt/openfoam8/etc/bashrc
         echo "AAA7"
         echo $WM_ARCH
