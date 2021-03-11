@@ -3,7 +3,6 @@ description: Install OpenFOAM-8 on ubuntu for github actions.
 author: Ondrej Winter
 
 runs:
-  using: 'composite'
   steps:
   - run: |
       sudo sh -c "wget --no-check-certificate -O - https://dl.openfoam.org/gpg.key | apt-key add -"
