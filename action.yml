@@ -15,6 +15,7 @@ runs:
       echo "AAA3"
       sudo apt-get -y install openfoam8 > /dev/null
       echo "AAA4"
+      echo $FOAM8_BASHRC 
       source $FOAM8_BASHRC
       echo "AAA5"
       mkdir -p $FOAM_RUN
