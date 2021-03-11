@@ -4,7 +4,8 @@ author: Ondrej Winter
 
 runs:
   steps:
-    - run: |
+    - name: Installation
+      run: |
         sudo sh -c "wget --no-check-certificate -O - https://dl.openfoam.org/gpg.key | apt-key add -"
         sudo add-apt-repository http://dl.openfoam.org/ubuntu
         sudo apt-get update
@@ -24,4 +25,3 @@ runs:
       env:
         FOAM8_BASHRC: "/opt/openfoam8/etc/bashrc"
       shell: bash
-   
