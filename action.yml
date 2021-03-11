@@ -11,8 +11,9 @@ runs:
       sudo apt-get update
       sudo apt-get -y install openfoam8
       echo "AAA4"
-      echo $FOAM8_BASHRC 
-      . $FOAM8_BASHRC
+      echo $FOAM8_BASHRC
+      cat $FOAM8_BASHRC
+      source $FOAM8_BASHRC
       echo "AAA5"
       mkdir -p $FOAM_RUN
       echo "AAA6"
