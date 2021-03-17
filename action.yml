@@ -1,4 +1,4 @@
-name: Install OpenFOAM-8 on ubuntu
+name: Install OpenFOAM-8
 description: Install OpenFOAM-8 on ubuntu for github actions.
 author: Ondrej Winter
 
